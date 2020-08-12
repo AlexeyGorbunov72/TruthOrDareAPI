@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import PackContent, Pack
 import json
 def getAllPacks(r):
@@ -16,4 +16,5 @@ def getPackContent(r, packId):
         packsJson["pack"].append({"task": [{"levelOfHard": pack.levelOfHard},
                                   {"content": pack.content},
                                   {"isTruth": pack.isTruth}]})
+
     return HttpResponse(json.dumps(packsJson))
