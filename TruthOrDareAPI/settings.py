@@ -25,7 +25,7 @@ SECRET_KEY = '_oc=^gy0dao@n3c+^2)*-t&e9=8kysq2(-gpqg)enpci)b2-0('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.0.12"]
 
 
 # Application definition
