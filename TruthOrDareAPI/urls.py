@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from polls.views import getAllPacks, getPackContent
+from polls.views import getAllPacks, getPackContent, loadPack
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/getPacks', getAllPacks),
-    path('api/getContentOfPack/<int:packId>', getPackContent)
+    path('api/getContentOfPack/<int:packId>', getPackContent),
+    path('api/loadPack', loadPack)
 ]
